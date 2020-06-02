@@ -4,43 +4,118 @@
 
 <details>
 
-  <summary>Click to expand</summary>
+<summary>Click to expand</summary>
 
-  ```bash
-  cd ~/source/repos/hng/
-  mkdir task-one
-  cd task-one
-  git init
-  touch README.md
-  code .
-  git add README.md
-  git commit -m "Document changes in readme"
-  git remote add origin git@github.com:piouson/task-one.git
-  git remote -v
-  git config --global credential.helper wincred
-  git push origin master
-  ```
+```bash
+cd ~/source/repos/hng/
+mkdir task-one
+cd task-one
+git init
+touch README.md
+code .
+git add README.md
+git commit -m "Document changes in readme"
+git remote add origin git@github.com:piouson/task-one.git
+git remote -v
+git config --global credential.helper wincred
+git push origin master
+```
 
 </details>
 
-## Working Locally with Git
+## Setup
 
-### Get Git
+<details>
 
-- [Install Git](https://git-scm.com/downloads) for your device
+<summary>Click to expand</summary>
+
+### Get the tools
+
+- Signup to [Github](http://github.com/)
+- Install [Visual Studio Code](https://code.visualstudio.com/download) for your device
+- Install [Git](https://git-scm.com/downloads) for your device
+
+### Confirm Git is installed
+
+- Open `Terminal` or `Git Bash` on Windows and run command
+
+```bash
+git --version
+```
+
+</details>
+
+## Starting From Remote Repo
+
+<details>
+
+<summary>Click to expand</summary>
+
+### Copy remote repository link
+
+- Find an existing repo on Github
+- Click _Clone or Download_ and copy the `ssh` or `https` link
 
 ### Change to workspace directory
 
 ```bash
-cd ~/source/repos/hng/
+cd ~/source/repos/
 ```
 
-> The symbol `~` is an alias for your `home folder`
-> It is `$home` in Pwoershell and `C:\Users\username\` on Windows
+### Clone repo
+
+```bash
+# https link
+git clone https://github.com/username/repo-name.git
+```
+
+### Change to cloned repo directory
+
+```bash
+cd repo-name
+```
+
+### Create new branch for development
+
+```bash
+git checkout -b branch-name
+```
+
+### Open folder for editing in VSCode
+
+```bash
+code .
+```
+
+### Save changes to local git
+
+```bash
+git status
+git add .
+git commit -m "enter commit message here"
+```
+
+### Push saved changes to remote git
+
+```bash
+git push origin branch-name
+git log --oneline --graph
+```
+
+Now head to Github to create a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)
+
+</details>
+
+## Starting From Local Repo
+
+<details>
+
+<summary>Click to expand</summary>
 
 ### Create folder for new project
 
 ```bash
+cd ~/source/repos/
 mkdir task-one
 ```
 
@@ -60,11 +135,6 @@ git init
 
 ```bash
 touch README.md
-```
-
-### Open folder for editing in VSCode
-
-```bash
 code .
 ```
 
@@ -83,17 +153,15 @@ git commit -m "Document changes in readme"
 
 > That's the basics covered for working locally with Git.
 
-## Working Remotely with Git
-
 ### Add a remote repo
 
 - Signup to [Github](http://github.com/)
-- Create new repo, I'll use`task-one`
+- Create new repo, I'll use `task-one`
 - Click _Clone or Download_ and copy `ssh` or `https` link
 - Continue in `Git Bash` below
 
 ```bash
-git remote add origin git@github.com:piouson/task-one.git
+git remote add origin git@github.com:username/task-one.git
 ```
 
 ### Confirm remote repo added
@@ -102,7 +170,7 @@ git remote add origin git@github.com:piouson/task-one.git
 git remote -v
 ```
 
-### Push [saved local Git changes](#save-changes-to-git-locally) to remote repo
+### Push [saved changes](#save-changes-to-git-locally) to remote repo
 
 ```bash
 git push origin master
@@ -118,6 +186,8 @@ git config --global credential.helper wincred
 ```
 
 For a more secure option using `ssh`, see [Github Help](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
+
+</details>
 
 ## Author
 
