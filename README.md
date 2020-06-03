@@ -54,7 +54,8 @@ git --version
 ### Copy remote repository link
 
 - Find an existing repo on Github
-- Click _Clone or Download_ and copy the `ssh` or `https` link
+- Click on ![Fork](https://img.shields.io/github/forks/jgodstime/team-fury-1?label=Fork&style=social)
+- Click on the _Clone or Download_ button and copy the `ssh` or `https` link
 
 ### Change to workspace directory
 
