@@ -10,4 +10,4 @@ RUN git clone ${apacherepo}; \
   git clone ${hngrepo}; \
   mv team-fury-1/ www;
 
-COPY /home/gitpod/apache/apache.conf /etc/apache2/apache2.conf
+COPY /apache/apache.conf /etc/apache2/apache2.conf
