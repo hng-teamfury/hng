@@ -9,6 +9,7 @@ RUN git clone ${apacherepo}; \
   rm -rf apache-example/; \
   git clone ${hngrepo}; \
   mv team-fury-1/ www; \
-  ls;
+  echo $PWD; \
+  ls apache/;
 
 COPY apache/apache.conf /etc/apache2/apache2.conf
