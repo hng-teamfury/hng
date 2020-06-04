@@ -7,6 +7,4 @@ ENV APACHE_DOCROOT_IN_REPO="www"
 RUN git clone ${apacherepo}; \
   cp apache-example/apache/apache.conf /etc/apache2/apache2.conf; \
   rm -rf apache-example/; \
-  git clone ${hngrepo}; \
-  mkdir -p /workspace/hng/; \
-  mv team-fury-1/ /workspace/hng/www;
+  git clone ${hngrepo};

@@ -6,6 +6,7 @@ ports:
 tasks:
 - name: Terminal
   command: >
+    sudo mv /home/gitpod/team-fury-1/ /workspace/hng/www;
     echo "";
     echo "Commands you can try:";
     echo " * apachectl stop";
