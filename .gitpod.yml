@@ -6,7 +6,11 @@ ports:
 tasks:
 - name: Terminal
   command: >
-    sudo mv /home/gitpod/team-fury-1/ /workspace/hng/www;
+    git clone https://github.com/gitpod-io/apache-example.git;
+    sudo cp apache-example/apache/apache.conf /etc/apache2/apache2.conf;
+    rm -rf apache-example/;
+    git clone https://github.com/jgodstime/team-fury-1.git;
+    mv team-fury-1/ www;
     echo "";
     echo "Commands you can try:";
     echo " * apachectl stop";
