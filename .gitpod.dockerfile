@@ -5,8 +5,8 @@ ENV apacherepo=https://github.com/gitpod-io/apache-example.git
 ENV APACHE_DOCROOT_IN_REPO="www"
 
 RUN git clone ${apacherepo}; \
-  mv apache-example/apache ./; \
-  cp apache/apache.conf /etc/apache2/apache2.conf; \
+  cp apache-example/apache/apache.conf /etc/apache2/apache2.conf; \
   rm -rf apache-example/; \
   git clone ${hngrepo}; \
-  mv team-fury-1/ www;
+  mkdir -p /workspace/hng/; \
+  mv team-fury-1/ /workspace/hng/www;
