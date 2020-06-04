@@ -6,8 +6,6 @@ ports:
 tasks:
 - name: Terminal
   command: >
-    git clone https://github.com/jgodstime/team-fury-1.git;
-    mv team-fury-1/ www;
     echo "";
     echo "Commands you can try:";
     echo " * apachectl stop";
